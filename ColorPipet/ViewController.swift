@@ -19,9 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet var blueValue: UILabel!
     @IBOutlet var blueSlider: UISlider!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,7 +39,7 @@ class ViewController: UIViewController {
         updateColorVuewBackground(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
     }
 
-
+    // MARK: - IBActions
     @IBAction func redSliderValueChanged() {
         redValue.text = String(format: "%.2f", redSlider.value)
         updateColorVuewBackground(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
@@ -55,7 +52,7 @@ class ViewController: UIViewController {
         blueValue.text = String(format: "%.2f", blueSlider.value)
         updateColorVuewBackground(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
     }
-    
+    // MARK: - private funcs
     private func updateColorVuewBackground(red: Float, green: Float, blue: Float) {
         let color = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
         colorView.backgroundColor = color
