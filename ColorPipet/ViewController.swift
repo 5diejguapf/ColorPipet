@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         blueValue.text = String(format: "%.2f", blueSlider.value)
         updateColorVuewBackground(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
     }
+    
     // MARK: - private funcs
     private func updateColorVuewBackground(red: Float, green: Float, blue: Float) {
         let color = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
