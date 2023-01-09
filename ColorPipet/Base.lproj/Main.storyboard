@@ -147,8 +147,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3k-I9-wpS">
-                                <rect key="frame" x="346" y="47" width="62" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3k-I9-wpS">
+                                <rect key="frame" x="370.33333333333331" y="47" width="41.666666666666686" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="pencil.tip" catalog="system" symbolScale="large"/>
@@ -162,7 +162,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="j3k-I9-wpS" firstAttribute="top" secondItem="z9F-uE-8ZC" secondAttribute="top" id="1WW-Kb-S9q"/>
-                            <constraint firstItem="z9F-uE-8ZC" firstAttribute="trailing" secondItem="j3k-I9-wpS" secondAttribute="trailing" constant="20" id="v4k-Z7-Rd1"/>
+                            <constraint firstItem="z9F-uE-8ZC" firstAttribute="trailing" secondItem="j3k-I9-wpS" secondAttribute="trailing" constant="16" id="8is-QC-b7Z"/>
+                            <constraint firstItem="j3k-I9-wpS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z9F-uE-8ZC" secondAttribute="leading" symbolic="YES" id="nnb-ly-Zgj"/>
                         </constraints>
                     </view>
                 </viewController>
