@@ -1,13 +1,14 @@
 //
-//  ViewController.swift
+//  SettingsViewController.swift
 //  ColorPipet
 //
 //  Created by serg on 29.12.2022.
 //
 
 import UIKit
+import Foundation
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet var colorView: UIView!
@@ -20,6 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var color: UIColor!
+    var exitDelegate: SetColorProtocole!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,10 +33,14 @@ class ViewController: UIViewController {
         greenSlider.tintColor = .green
         blueSlider.tintColor = .blue
         
-        initRandomColor()
+        initRandomColor(color)
         updateLabelsText()
         
         updateColorVuewBackground()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        exitDelegate.setBackground(colorView.backgroundColor)
     }
 
     // MARK: - IBActions
@@ -55,10 +63,16 @@ class ViewController: UIViewController {
         colorView.backgroundColor = color
     }
     
-    private func initRandomColor() {
-        redSlider.value = Float.random(in: 0.0...1.0)
-        greenSlider.value = Float.random(in: 0.0...1.0)
-        blueSlider.value = Float.random(in: 0.0...1.0)
+    private func initRandomColor(_ color: UIColor) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        redSlider.value = Float(red)
+        greenSlider.value = Float(green)
+        blueSlider.value = Float(blue)
     }
     
     private func updateLabelsText() {
@@ -66,5 +80,7 @@ class ViewController: UIViewController {
         greenValue.text = String(format: "%.2f", greenSlider.value)
         blueValue.text = String(format: "%.2f", blueSlider.value)
     }
+    
+    
 }
 

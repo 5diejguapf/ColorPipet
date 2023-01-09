@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D55C1946296CD21100B2ADF5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C1945296CD21100B2ADF5 /* MainViewController.swift */; };
+		D55C1948296CDA7600B2ADF5 /* SetColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C1947296CDA7600B2ADF5 /* SetColorProtocol.swift */; };
 		D5BD6895295DA471007A9218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD6894295DA471007A9218 /* AppDelegate.swift */; };
 		D5BD6897295DA471007A9218 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD6896295DA471007A9218 /* SceneDelegate.swift */; };
-		D5BD6899295DA471007A9218 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD6898295DA471007A9218 /* ViewController.swift */; };
+		D5BD6899295DA471007A9218 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD6898295DA471007A9218 /* SettingsViewController.swift */; };
 		D5BD689C295DA471007A9218 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BD689A295DA471007A9218 /* Main.storyboard */; };
 		D5BD689E295DA472007A9218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BD689D295DA472007A9218 /* Assets.xcassets */; };
 		D5BD68A1295DA472007A9218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BD689F295DA472007A9218 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D55C1945296CD21100B2ADF5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D55C1947296CDA7600B2ADF5 /* SetColorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColorProtocol.swift; sourceTree = "<group>"; };
 		D5BD6891295DA471007A9218 /* ColorPipet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPipet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BD6894295DA471007A9218 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BD6896295DA471007A9218 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5BD6898295DA471007A9218 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5BD6898295DA471007A9218 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D5BD689B295DA471007A9218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5BD689D295DA472007A9218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5BD68A0295DA472007A9218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 			children = (
 				D5BD6894295DA471007A9218 /* AppDelegate.swift */,
 				D5BD6896295DA471007A9218 /* SceneDelegate.swift */,
-				D5BD6898295DA471007A9218 /* ViewController.swift */,
+				D5BD6898295DA471007A9218 /* SettingsViewController.swift */,
+				D55C1947296CDA7600B2ADF5 /* SetColorProtocol.swift */,
+				D55C1945296CD21100B2ADF5 /* MainViewController.swift */,
 				D5BD689A295DA471007A9218 /* Main.storyboard */,
 				D5BD689D295DA472007A9218 /* Assets.xcassets */,
 				D5BD689F295DA472007A9218 /* LaunchScreen.storyboard */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5BD6899295DA471007A9218 /* ViewController.swift in Sources */,
+				D5BD6899295DA471007A9218 /* SettingsViewController.swift in Sources */,
 				D5BD6895295DA471007A9218 /* AppDelegate.swift in Sources */,
 				D5BD6897295DA471007A9218 /* SceneDelegate.swift in Sources */,
+				D55C1948296CDA7600B2ADF5 /* SetColorProtocol.swift in Sources */,
+				D55C1946296CD21100B2ADF5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
