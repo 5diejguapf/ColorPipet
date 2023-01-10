@@ -11,6 +11,7 @@ import Foundation
 final class SettingsViewController: UIViewController {
 
     // MARK: - Outlets
+    
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redValue: UILabel!
@@ -36,9 +37,7 @@ final class SettingsViewController: UIViewController {
         configTextFields()
         configSliders()
         
-        updateLabelsText()
-        updateTFieldsText()
-        updateColorViewBackground()
+        sliderValueChanged()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,7 +47,7 @@ final class SettingsViewController: UIViewController {
     
     // MARK: - IBActions
     
-    @IBAction func sliderValueChanged(_ sender: UISlider) {
+    @IBAction func sliderValueChanged() {
         updateTFieldsText()
         updateLabelsText()
         updateColorViewBackground()
@@ -110,23 +109,22 @@ final class SettingsViewController: UIViewController {
 extension SettingsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        var slider: UISlider
+        let value = Float(textField.text ?? "") ?? 0
         
         switch textField.tag {
-        case 0: slider = redSlider
-        case 1: slider = greenSlider
-        default: slider = blueSlider
+        case 0: redSlider.value = value
+        case 1: greenSlider.value = value
+        case 2: blueSlider.value = value
+        default: return
         }
         
-        if let text = textField.text {
-            slider.value = Float(text) ?? 0.0
-            sliderValueChanged(slider)
-        }
+        sliderValueChanged()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return false }
         let newString = (text as NSString).replacingCharacters(in: range, with: string)
+        
         if newString.isEmpty || string.isEmpty {
             return true
         }

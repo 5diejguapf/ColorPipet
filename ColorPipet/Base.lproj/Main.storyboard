@@ -46,7 +46,7 @@
                                                 <rect key="frame" x="132.66666666666663" y="0.0" width="207.33333333333337" height="35"/>
                                                 <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eXI-9F-9jj"/>
+                                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="QhX-t7-8jf"/>
                                                 </connections>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-3x-DYF">
@@ -81,7 +81,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pqq-Pq-C0R">
                                                 <rect key="frame" x="132.66666666666663" y="0.0" width="207.33333333333337" height="35"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="K0T-00-SOh"/>
+                                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="5Fc-0i-L4t"/>
                                                 </connections>
                                             </slider>
                                             <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52b-qC-LtI">
@@ -116,7 +116,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8zk-wO-b9C">
                                                 <rect key="frame" x="132.66666666666663" y="0.0" width="207.33333333333337" height="35"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hZa-CN-b7Y"/>
+                                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="JC5-Pl-qUB"/>
                                                 </connections>
                                             </slider>
                                             <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4h-gz-3ab">
