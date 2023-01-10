@@ -46,16 +46,16 @@
                                                 <rect key="frame" x="132.66666666666663" y="0.0" width="207.33333333333337" height="35"/>
                                                 <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="redSliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="YN2-3y-3eC"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eXI-9F-9jj"/>
                                                 </connections>
                                             </slider>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-3x-DYF">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-3x-DYF">
                                                 <rect key="frame" x="346" y="0.0" width="50" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="4fv-R8-4kG"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -81,16 +81,16 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pqq-Pq-C0R">
                                                 <rect key="frame" x="132.66666666666663" y="0.0" width="207.33333333333337" height="35"/>
                                                 <connections>
-                                                    <action selector="greenSliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="oRZ-ND-zsI"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="K0T-00-SOh"/>
                                                 </connections>
                                             </slider>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52b-qC-LtI">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52b-qC-LtI">
                                                 <rect key="frame" x="346" y="0.0" width="50" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="wJk-At-No7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -116,16 +116,16 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8zk-wO-b9C">
                                                 <rect key="frame" x="132.66666666666663" y="0.0" width="207.33333333333337" height="35"/>
                                                 <connections>
-                                                    <action selector="blueSliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="ZFB-1A-Aif"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hZa-CN-b7Y"/>
                                                 </connections>
                                             </slider>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4h-gz-3ab">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4h-gz-3ab">
                                                 <rect key="frame" x="346" y="0.0" width="50" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="GkE-qF-lMu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -136,13 +136,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKO-Nt-hzv">
-                                <rect key="frame" x="167.33333333333334" y="642" width="93.333333333333343" height="50"/>
+                                <rect key="frame" x="167.33333333333334" y="699" width="93.333333333333343" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="donePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xkk-4z-670"/>
+                                    <action selector="donePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="rtr-9J-WRE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -157,17 +157,20 @@
                             <constraint firstItem="Vr7-wt-RBg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="Mhi-LP-L6r"/>
                             <constraint firstItem="x0Q-CR-Pj0" firstAttribute="top" secondItem="Vr7-wt-RBg" secondAttribute="bottom" constant="32" id="VCx-fT-tqX"/>
                             <constraint firstItem="Vr7-wt-RBg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hAe-eh-sPy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XKO-Nt-hzv" secondAttribute="bottom" constant="177" id="kO3-fQ-CCj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XKO-Nt-hzv" secondAttribute="bottom" constant="120" id="kO3-fQ-CCj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x0Q-CR-Pj0" secondAttribute="trailing" constant="16" id="xev-Sn-ecb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="blueSlider" destination="8zk-wO-b9C" id="mxg-3E-hHY"/>
+                        <outlet property="blueTextField" destination="i4h-gz-3ab" id="Aqg-Kq-wgN"/>
                         <outlet property="blueValue" destination="qol-Km-0lg" id="G7q-bh-O9L"/>
                         <outlet property="colorView" destination="Vr7-wt-RBg" id="FbL-xR-01g"/>
                         <outlet property="greenSlider" destination="Pqq-Pq-C0R" id="ESh-M6-DSM"/>
+                        <outlet property="greenTextField" destination="52b-qC-LtI" id="E6P-qU-Wwz"/>
                         <outlet property="greenValue" destination="uNs-oe-KcO" id="U3g-9N-A1A"/>
                         <outlet property="redSlider" destination="LGB-Qf-IaJ" id="0zd-5y-jbV"/>
+                        <outlet property="redTextField" destination="JAt-3x-DYF" id="mAD-TK-Glw"/>
                         <outlet property="redValue" destination="Qyd-4O-weC" id="VrD-tK-7fI"/>
                     </connections>
                 </viewController>
