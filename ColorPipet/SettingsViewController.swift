@@ -29,14 +29,11 @@ class SettingsViewController: UIViewController {
         
         colorView.layer.cornerRadius = 10
         
-        redSlider.tintColor = .red
-        greenSlider.tintColor = .green
-        blueSlider.tintColor = .blue
-        
+        configSliders()
         initRandomColor(color)
         updateLabelsText()
         
-        updateColorVuewBackground()
+        updateColorViewBackground()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,21 +43,31 @@ class SettingsViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func redSliderValueChanged() {
         redValue.text = String(format: "%.2f", redSlider.value)
-        updateColorVuewBackground()
+        updateColorViewBackground()
     }
     @IBAction func greenSliderValueChanged() {
         greenValue.text = String(format: "%.2f", greenSlider.value)
-        updateColorVuewBackground()
+        updateColorViewBackground()
     }
     @IBAction func blueSliderValueChanged() {
         blueValue.text = String(format: "%.2f", blueSlider.value)
-        updateColorVuewBackground()
+        updateColorViewBackground()
+    }
+    
+    @IBAction func donePressed() {
+        dismiss(animated: true)
     }
     
     // MARK: - private funcs
-    private func updateColorVuewBackground() {
+    private func updateColorViewBackground() {
         let color = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
         colorView.backgroundColor = color
+    }
+    
+    private func configSliders() {
+        redSlider.tintColor = .red
+        greenSlider.tintColor = .green
+        blueSlider.tintColor = .blue
     }
     
     private func initRandomColor(_ color: UIColor) {
@@ -80,7 +87,5 @@ class SettingsViewController: UIViewController {
         greenValue.text = String(format: "%.2f", greenSlider.value)
         blueValue.text = String(format: "%.2f", blueSlider.value)
     }
-    
-    
 }
 
