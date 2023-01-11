@@ -62,7 +62,7 @@ final class SettingsViewController: UIViewController {
     
     private func configTextFields() {
         for tf in [redTextField, greenTextField, blueTextField] {
-            addNumpadDoneButton(textField: tf!)
+            addNumpadDoneButton(for: tf!)
             tf!.delegate = self
         }
     }
@@ -112,9 +112,9 @@ extension SettingsViewController: UITextFieldDelegate {
         let value = Float(textField.text ?? "") ?? 0
         
         switch textField.tag {
-        case 0: redSlider.value = value
-        case 1: greenSlider.value = value
-        case 2: blueSlider.value = value
+        case 0: redSlider.setValue(value, animated: true)
+        case 1: greenSlider.setValue(value, animated: true)
+        case 2: blueSlider.setValue(value, animated: true)
         default: return
         }
         
@@ -142,17 +142,15 @@ extension SettingsViewController: UITextFieldDelegate {
         return true
     }
     
-    private func addNumpadDoneButton(textField: UITextField) {
+    private func addNumpadDoneButton(for textField: UITextField) {
         let keypadToolbar: UIToolbar = UIToolbar()
+        keypadToolbar.sizeToFit()
+        textField.inputAccessoryView = keypadToolbar
         
         // add a done button to the numberpad
-        keypadToolbar.items=[
-            UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: textField, action: #selector(UITextField.resignFirstResponder)),
+        keypadToolbar.items = [
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(barButtonSystemItem: .done, target: textField, action: #selector(UITextField.resignFirstResponder)),
         ]
-        keypadToolbar.sizeToFit()
-        
-        // add a toolbar with a done button above the number pad
-        textField.inputAccessoryView = keypadToolbar
     }
 }
